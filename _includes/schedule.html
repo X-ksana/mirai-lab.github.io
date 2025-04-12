@@ -1,0 +1,30 @@
+<h2>Upcoming Sessions</h2>
+
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Presenter</th>
+        <th>Paper</th>
+        <th>Materials</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for post in site.posts reversed %}
+        {% if post.date >= site.time %}
+        <tr>
+          <td>{{ post.date | date: "%b %d, %Y" }}</td>
+          <td>{{ post.presenter }}</td>
+          <td><a href="{{ post.paper_url }}">{{ post.title }}</a></td>
+          <td>
+            {% if post.slides %}
+            <a href="{{ post.slides }}">Slides</a>
+            {% endif %}
+          </td>
+        </tr>
+        {% endif %}
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
