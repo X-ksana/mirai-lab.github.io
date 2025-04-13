@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://github.com/X-ksana/mirai-lab.github.io/journal-club/sitemap.xml
+Sitemap: https://mirai-lab.github.io/journal-club/sitemap.xml
